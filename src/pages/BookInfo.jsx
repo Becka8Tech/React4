@@ -13,10 +13,9 @@ const BookInfo = ({ books, addToCart, cart }) => {
     addToCart(book);
   }
 
-function bookExistsOnCart() {
-    console.log(cart)
-     const bookExistsOnCart = cart.find((book) => book.id === +id);
-}
+  function bookExistsOnCart() {
+    return cart.find((book) => book.id === +id);
+  }
 
   return (
     <div id="books__body">
